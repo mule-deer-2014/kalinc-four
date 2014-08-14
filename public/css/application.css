@@ -1,8 +1,36 @@
 
-.connect_board td {
+
+.racer_table td.active {
   background-color: black;
+}
+
+
+#connect_board td {
+  background-color:	grey;
   border: blue solid;
   font-size: 40pt;
   height: 100px;
   width: 100px;
+  /*content:url("images/circle.png");*/
+  /*background-image: "images/circle.png";*/
+  /*border-radius: 40px;*/
 }
+
+.test {
+	height: 100px;
+  width: 100px;
+  /*border-radius: 40px;*/
+  /*background-color: red;*/
+  content:url("images/circle.png");
+
+}
+
+
+/*
+.connect_board td {
+  background-color: black;
+  height: 30px;
+  width: 30px;
+  border: 2px solid blue;
+  border-radius: 40px;
+}*/
