@@ -19,9 +19,13 @@
 .players {
 	height: 80px;
   width: 80px;
-  /*border-radius: 40px;*/
-  /*background-color: red;*/
   border-radius: 40px;
+  margin: 0 auto;
+
+	   /* width: 640px; can be in percentage also.*/
+  /*  height: auto;
+    padding: 10px;
+    position: relative;*/
 }
 
 .player1 {
