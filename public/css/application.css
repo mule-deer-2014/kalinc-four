@@ -1,0 +1,8 @@
+
+.connect_board td {
+  background-color: black;
+  border: blue solid;
+  font-size: 40pt;
+  height: 100px;
+  width: 100px;
+}
