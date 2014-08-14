@@ -1,7 +1,10 @@
-$(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+$("td").click(function() {
+  elem = document.createElement("div");
+  elem.className = "poop";
+  if ($(this).find(".poop").length == 0) {
+    $(this).append( elem );
+  };
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
 });
+
+
