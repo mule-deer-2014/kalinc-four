@@ -13,16 +13,23 @@
   width: 100px;
   /*content:url("images/circle.png");*/
   /*background-image: "images/circle.png";*/
-  /*border-radius: 40px;*/
+  
 }
 
-.test {
-	height: 100px;
-  width: 100px;
+.players {
+	height: 80px;
+  width: 80px;
   /*border-radius: 40px;*/
   /*background-color: red;*/
-  content:url("images/circle.png");
+  border-radius: 40px;
+}
 
+.player1 {
+  content:url("images/josh.jpeg");
+}
+
+.player2 {
+  content:url("images/derek.png");
 }
 
 
