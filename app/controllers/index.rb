@@ -63,3 +63,4 @@ post '/users' do
   User.create(name: params[:name], username: params[:username])
   redirect "/"
 end
+
