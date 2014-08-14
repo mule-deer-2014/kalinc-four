@@ -1,0 +1,19 @@
+<div style="width: 1000px; margin: auto">
+
+  <div style="float: left">
+    <% if current_user %>
+      <%= erb :_logged %>
+    <% else %>
+      <%= erb :_log_in %>
+    <% end %>
+  </div>
+
+  <div style="float: right">
+    <% if current_user2 %>
+      <%= erb :_logged2 %>
+    <% else %>
+      <%= erb :_log_in2 %>
+    <% end %>
+  </div>
+
+</div>
