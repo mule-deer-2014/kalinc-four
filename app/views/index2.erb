@@ -1,4 +1,3 @@
-
 <html>
   <head>
     <title>Kalinc Four</title>
@@ -7,7 +6,15 @@
     <div id="container">
     <h1>Kalinc Four</h1>
 
-    <div id="user1" class="user-info"></div>
+    <div id="user1" class="user-info">
+        <div style="float: left">
+            <% if current_user %>
+            <%= erb :_logged %>
+            <% else %>
+            <%= erb :_log_in %>
+            <% end %>
+        </div>
+    </div>
 
     <table id="connect_board">
       <tr id="row_1">
@@ -66,7 +73,18 @@
       </tr>
     </table>
 
-    <div id="user2" class="user-info"></div>
+    <div id="user2" class="user-info">
+
+    <div style="float: right">
+      <% if current_user2 %>
+        <%= erb :_logged2 %>
+      <% else %>
+        <%= erb :_log_in2 %>
+      <% end %>
+    </div>
+
+
+    </div>
 
     </div>
   </body>
