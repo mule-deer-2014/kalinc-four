@@ -1,7 +1,7 @@
 get '/' do
   # render home page
  #TODO: Show all users if user is signed in
-  erb :index
+  erb :index2
 end
 
 post '/sessions/player1' do
