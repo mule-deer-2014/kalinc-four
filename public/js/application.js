@@ -1,42 +1,54 @@
 window.playerId = 1;
 
 $("td").click(function() {
-  $clicked_cell = $(this)
-  col_num = find_column($clicked_cell);
-  column_cells = $("." + col_num);
+  $clickedCell = $(this)
+  var colNum = findColumn($clickedCell);
+  var columnCells = $("." + colNum);
 
-  var cell_to_fill = find_cell_to_fill(column_cells);
-  player_pic = toggle_player();
-  cell_to_fill.append( player_pic );
+  var cellToFill = findCellToFill(columnCells);
+  var playerPic = togglePlayer();
+  if (cellToFill != null) {
+    cellToFill.append( playerPic );
+  }
 });
 
-var find_cell_to_fill = function(column_cells) {
-  for (var i = 0; i < column_cells.length; i++) {
-    cell = $(column_cells[i]);
-    console.log(cell)
+var findCellToFill = function(columnCells) {
+  for (var i = 0; i < columnCells.length; i++) {
+    var cell = $(columnCells[i]);
     if (cell.find(".players").length === 0){
-      cell_to_fill = cell;
+      var cellToFill = cell;
     }
   }
-  return cell_to_fill;
-}
 
+  //checks to see if column is full
+  if (columnCells.first().find(".players").length >= 1) {
+    cellToFill = null;
+  }
+  return cellToFill;
+};
 
-var find_column = function(clicked_cell) {
-  return clicked_cell.attr('class');
-}
+var findColumn = function(clickedCell) {
+  return clickedCell.attr('class');
+};
 
-var toggle_player = function() {
-  elem = document.createElement("div");
-  className = "players"
+var togglePlayer = function() {
+  var playerPic = document.createElement("div");
+  var className = "players";
   if (window.playerId === 1 ) {
-    elem.className = className + " player1";
+    playerPic.className = className + " player1";
     window.playerId = 2;
   } else if (window.playerId === 2) {
-    elem.className = className + " player2";
+    playerPic.className = className + " player2";
     window.playerId =1;
   }
-  return elem
-}
+  return playerPic;
+};
 
 
+var check_rows_for_winner = function() {
+  for (var i = 1; i <= 6; i++) {
+    rowCells = $("row_" + i);
+
+  }
+
+};
