@@ -1,75 +1,19 @@
+<div style="width: 1000px; margin: auto">
 
-<html>
-  <head>
-    <title>Kalinc Four</title>
-  </head>
-  <body>
-    <div id="container">
-    <h1>Kalinc Four</h1>
+  <div style="float: left">
+    <% if current_user %>
+      <%= erb :_logged %>
+    <% else %>
+      <%= erb :_log_in %>
+    <% end %>
+  </div>
 
-    <div id="user1" class="user-info"></div>
+  <div style="float: right">
+    <% if current_user2 %>
+      <%= erb :_logged2 %>
+    <% else %>
+      <%= erb :_log_in2 %>
+    <% end %>
+  </div>
 
-    <table id="connect_board">
-      <tr id="row_1">
-        <td class="col_1"></td>
-        <td class="col_2"></td>
-        <td class="col_3"></td>
-        <td class="col_4"></td>
-        <td class="col_5"></td>
-        <td class="col_6"></td>
-        <td class="col_7"></td>
-      </tr>
-      <tr id="row_2">
-        <td class="col_1"></td>
-        <td class="col_2"></td>
-        <td class="col_3"></td>
-        <td class="col_4"></td>
-        <td class="col_5"></td>
-        <td class="col_6"></td>
-        <td class="col_7"></td>
-      </tr>
-        <tr id="row_3">
-        <td class="col_1"></td>
-        <td class="col_2"></td>
-        <td class="col_3"></td>
-        <td class="col_4"></td>
-        <td class="col_5"></td>
-        <td class="col_6"></td>
-        <td class="col_7"></td>
-      </tr>
-        <tr id="row_4">
-        <td class="col_1"></td>
-        <td class="col_2"></td>
-        <td class="col_3"></td>
-        <td class="col_4"></td>
-        <td class="col_5"></td>
-        <td class="col_6"></td>
-        <td class="col_7"></td>
-      </tr>
-        <tr id="row_5">
-        <td class="col_1"></td>
-        <td class="col_2"></td>
-        <td class="col_3"></td>
-        <td class="col_4"></td>
-        <td class="col_5"></td>
-        <td class="col_6"></td>
-        <td class="col_7"></td>
-      </tr>
-        <tr id="row_6">
-        <td class="col_1"></td>
-        <td class="col_2"></td>
-        <td class="col_3"></td>
-        <td class="col_4"></td>
-        <td class="col_5"></td>
-        <td class="col_6"></td>
-        <td class="col_7"></td>
-      </tr>
-    </table>
-
-    <div id="user2" class="user-info"></div>
-
-    </div>
-  </body>
-</html>
-
-
+</div>
